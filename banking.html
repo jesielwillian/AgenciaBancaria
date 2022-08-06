@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon -->
+    <link rel="icon" href="media/icons/bv.ico" type="image/x-icon" sizes="256x256">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5485bfc962.js" crossorigin="anonymous"></script>
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Banco Vieira | Transação</title>
+</head>
+
+<body>
+    <header>
+        <div
+            class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto w-full mx-auto mt-0 mb-5 bg-green-200 p-5 rounded">
+            <img class="w-2/4 sm:w-2/4 md:w-2/4 lg:w-2/4 xl:w-1/6 mx-auto sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0"
+                src="media/icons/bv.png" alt="">
+            <div class="flex items-center">
+                <h1 class="text-4xl lg:text-5xl text-center">Bem-vindo à <span class="font-bold text-purple-600">
+                        Transação</span>
+                </h1>
+            </div>
+        </div>
+        <h2 class="text-2xl font-semibold text-center mt-5 mb-5 text-yellow-600 overflow-x-auto">
+            Olá! <span id="userEmail" class="text-green-400"></span> Vamos calcular algum dinheiro!
+        </h2>
+    </header>
+    <main>
+        <!-- Saldo e Transação -->
+        <div class="flex justify-center">
+            <a class="text-center mx-5 w-3/4 lg:w-1/12 border border-gray-400 rounded px-2 py-2 font-bold uppercase text-white bg-green-600"
+                href=""><button></button>Atualizar</a>
+            <a id="logout"
+                class="text-center mx-5 w-3/4 lg:w-1/12 border border-gray-400 rounded px-2 py-2 font-bold uppercase text-white bg-red-600"
+                href="index.html"><button></button>Sair</a>
+        </div>
+
+        <section class="mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-3/4 font-semibold mx-auto text-white">
+                <div class="bg-blue-500 p-8 rounded shadow-2xl cursor-pointer overflow-x-auto">
+                    <h3 id="deposit-warning" class="text-red-900"></h3>
+                    <h3 class='text-2xl'>Depositar</h3>
+                    <h2 class='text-3xl'>R$<span id="deposit-amount">0,00</span>
+                    </h2>
+                </div>
+                <div class="bg-yellow-500 p-8 rounded shadow-2xl cursor-pointer overflow-x-auto">
+                    <h3 id="withdraw-warning" class="text-red-900"></h3>
+                    <h3 class='text-2xl'>Retirar</h3>
+                    <h2 class='text-3xl'>R$<span id="withdraw-amount">0,00</span></h2>
+                </div>
+                <div class="bg-red-500 p-8 rounded shadow-2xl cursor-pointer overflow-x-auto">
+                    <h3 class='text-2xl'>Saldo</h3>
+                    <h2 class='text-3xl'>R$<span id="balance">0,00</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- Depositar e Retirar -->
+        <section class="mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-3/4 font-semibold mx-auto text-white">
+                <div class="bg-green-400 p-8 rounded shadow-2xl cursor-pointer">
+                    <h3 class='text-2xl mb-2'>Por favor deposite</h3>
+                    <input
+                        class="mx-auto lg:mx-0 w-3/4 block border border-gray-400 rounded p-2 mb-4 text-green-600 font-bold"
+                        type="text" name="" id="deposit-input" placeholder="R$ valor que deseja depositar">
+                    <button type="submit" id="deposit-submit"
+                        class="mx-auto lg:mx-0 w-3/4 lg:w-auto block border border-gray-400 rounded py-2 px-6 font-bold uppercase text-white bg-green-800 shadow-2xl">Entrar
+                    </button>
+                </div>
+                <div class="bg-red-400 p-8 rounded shadow-2xl cursor-pointer">
+                    <h3 class='text-2xl mb-2'>Por favor retire</h3>
+                    <input
+                        class="mx-auto lg:mx-0 w-3/4 block border border-gray-400 rounded p-2 mb-4 text-red-600 font-bold"
+                        type="text" name="" id="withdraw-input" placeholder="R$ valor que deseja retirar">
+                    <button type="submit" id="withdraw-submit"
+                        class="mx-auto lg:mx-0 w-3/4 lg:w-auto block border border-gray-400 rounded py-2 px-6 font-bold uppercase text-white bg-red-800 shadow-2xl">Entrar
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="font-bold mt-28 mb-5">
+        <p class="text-center">Copyright &copy; 2022 | Todos os direitos reservados</p>
+        <p class="text-center text-blue-600">Jesiel W. Vieira</p>
+    </footer>
+    <script src="js/bank.js"></script>
+</body>
+
+</html>
